@@ -15,7 +15,7 @@ def check_record(levels):
 
 
 
-with open("inputs/input2.txt", "r") as file:
+with open("../inputs/input2.txt", "r") as file:
     data = file.read()
 
 total_safe = 0

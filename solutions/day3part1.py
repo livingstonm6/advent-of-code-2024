@@ -1,19 +1,13 @@
-with open("inputs/input3.txt", "r") as file:
+with open("../inputs/input3.txt", "r") as file:
     data = file.read()
 
 valid_chars = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ","}
 result = 0
 i = 0
-enabled = True
 
 while i < len(data):
     j = i + 4
-
     while data[i:j] != "mul(" and j < len(data):
-        if data[i:j] == "do()":
-            enabled = True
-        elif j + 3 < len(data) and data[i:j+3] == "don't()":
-            enabled = False
         i += 1
         j += 1
 
@@ -31,7 +25,7 @@ while i < len(data):
     if j == len(data):
         break
 
-    if valid and enabled:
+    if valid:
         nums = data[i:j].split(",")
         if len(nums) == 2:
             result += (int(nums[0]) * int(nums[1]))

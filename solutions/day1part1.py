@@ -1,7 +1,7 @@
 lst1 = []
 lst2 = []
 
-with open("inputs/input1.txt", "r") as file:
+with open("../inputs/input1.txt", "r") as file:
     data = file.read()
 
 for line in data.splitlines():
