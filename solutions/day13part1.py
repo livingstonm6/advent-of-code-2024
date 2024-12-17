@@ -4,7 +4,6 @@ with open("../inputs/input13.txt", "r") as file:
 machines = [x.splitlines() for x in data.split("\n\n")]
 
 total_min = 0
-passed = 0
 
 for machine in data.split("\n\n"):
     machine_text = machine.splitlines()
@@ -26,6 +25,5 @@ for machine in data.split("\n\n"):
 
     if minimum < float('inf'):
         total_min += minimum
-        passed += 1
 
 print(total_min)
